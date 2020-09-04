@@ -1,6 +1,10 @@
 package main
 
 func main() {
-	cards := newDeckFromFile("my_cards")
-	cards.print()
+	cards := newDeck()
+	
+	hand, _ := deal(cards, 5)
+
+	hand.shuffle()
+	hand.print()
 }
